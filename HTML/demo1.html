@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo{
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(red 70%,green);
+        }
+        .demo1{
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px;
+        }
+    </style>
+</head>
+<body>
+<h1>音频控件</h1>
+<audio src="./media/1.mp3" controls></audio>
+<h1>视频控件</h1>
+<video src="./media/2.mp4" controls></video>
+<a href="http://www.baidu.com" target="_blank">百度一下</a>
+<a href="http://www.baidu.com" target="_self">百度网盘</a>
+<input type="text" placeholder="用户输入的内容" value="帅哥" name="nickname"/>
+<input type="password"/>
+<input type="radio" name="age">大</input>
+<input type="radio" name="age">小</input>
+<input type="checkbox"/>
+<input type="file" multiple/>
+<input type="submit"/>
+<input type="reset"/>
+<!--普通按钮-->
+<input type="button">普通按钮</input>
+<select name="" id="">
+    <option value="">北京</option>
+    <option value="">上海</option>
+    <option value="">南京</option>
+</select>
+<textarea cols="3px" rows="3px"></textarea>
+爱好:
+<input type="checkbox" id="one">
+<label for="one">敲代码</label>
+
+<label for="two">
+    <input type="checkbox" id="two">熬夜
+</label>
+
+<h1>
+    wushibo
+</h1>
+<li>
+    <span>123</span>
+    <span>456</span>
+    <span>789</span>
+</li>
+<h2>webGeek</h2>
+<div>
+    <label for="loginname">用户名</label>
+    <input type="text" id="loginname" placeholder="用户名">
+</div>
+<!--value中的值就是用户输入的值-->
+<input type="text" accesskey="h" value="按下alt+h"/>
+<script>
+    function show(animal) {
+        let type = animal.getAttribute("data-type")
+        alert(animal.innerHTML + "是一种" + type + "。 ")
+
+    }
+    if (navigator.geolocation) {//判断地理位置是否支持
+        //业务代码
+        navigator.geolocation.getCurrentPosition(function (position) {
+            //TODO 成功时的处理
+            var timestamp = position.timestamp;
+            var coords = position.coords;
+            console.log(timestamp)
+            console.log(coords)
+        }, function (error) {
+            //TODO 失败时的处理
+            console.log(error);
+        }, {
+            //参数设置
+        })
+
+    } else {
+        x.innerHTML = "该浏览器不支持获取地理位置。";
+    }
+    //对象扩展运算符
+    let person1={name:'Amy',age:15}
+    let person2={country:'china'}
+    let someone={...person1,...person2}
+    console.log(someone.name)
+    console.log(someone.age)
+    console.log(someone.country)
+    console.log(...person1)
+
+</script>
+<ul>
+    <li onclick="show(this)" id="owl" data-type="标记语言">html</li>
+</ul>
+<p id="drag1" draggable="true">这是一段可移动的段落</p>
+<!--<iframe src="http://www.baidu.com" height="500px" width="500px"></iframe>-->
+<div class="demo"></div>
+<div class="demo1">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+</div>
+<div class="demo3">
+    <a href="#">百度一下</a>
+    <h2>标题2</h2>
+    <h5>标题5</h5>
+</div>
+
+<div class="demo5">
+    <div>
+        学成在线
+    </div>
+    <div>
+        <ul class="demo4">
+            <li class="task">
+                <select name="">
+                    <option value="">北京</option>
+                    <option value="">南京</option>
+                    <option value="">上海</option>
+                </select>
+            </li>
+            <li class="task">demo2</li>
+            <li class="task">demo3</li>
+            <li class="task">demo4</li>
+        </ul>
+    </div>
+</div>
+<div>
+    <div>
+        <h1>
+            wushibo
+        </h1>
+    </div>
+</div>
+<style>
+    .demo4{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 30px;
+    }
+    .task{
+        margin: 0px 10px;
+        /*width: 50px;*/
+        height: 20px;
+        border: #2e6da4 1px solid;
+        border-radius: 30px;
+    }
+    .demo5{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 30px;
+        background-color: #5e5e5e;
+        align-items:center;
+        padding: 0px 100px;
+    }
+</style>
+</body>
+</html>

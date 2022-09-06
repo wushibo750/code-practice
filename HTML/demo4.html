@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*确实很自带外边距*/
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #father{
+            /*高度是自定义的*/
+            width: 300px;
+            background-color: red;
+            border: 1px solid blue;
+        }
+        #father div{
+            /*background-color的影响范围是border里面的*/
+            padding: 10px;
+            margin: 15px;
+        }
+        #son1{
+            background-color: hotpink;
+            float: left;
+        }
+        #son2{
+            background-color: #FCD568;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: purple;
+        }
+        a:hover{
+            color: yellow;
+        }
+        a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+    <div id="son1">box1</div>
+    <div id="son2">box2</div>
+</div>
+<a href="http://www.lvyestudy.com" target="_blank">绿叶学习网</a>
+
+
+</body>
+</html>

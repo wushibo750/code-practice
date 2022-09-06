@@ -1,0 +1,102 @@
+/*版心*/
+.wrapper{
+    width: 1240px;
+    margin:0 auto;
+}
+
+
+/*快捷导航*/
+.shortcut{
+    height: 52px;
+    background-color: #333;
+}
+.shortcut .wrapper{
+    height: 52px;
+}
+/*文字内容右侧对齐*/
+.shortcut .wrapper ul{
+    float: right;
+}
+.shortcut .wrapper li{
+    float: left;
+    line-height: 52px;
+}
+.shortcut .wrapper a{
+    padding:0 16px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+.shortcut .wrapper a span{
+    display: inline-block;
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -70px;
+    vertical-align: middle;
+}
+.shortcut .wrapper li:last-child a{
+    border:0;
+}
+
+/*版权footer*/
+.footer{
+    height: 324px;
+    background-color: #333;
+}
+.footer .wrapper{
+    width: 1393px;
+}
+.footer .top{
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 3px solid #434343;
+}
+.footer .top li{
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+    line-height: 58px;
+}
+.footer .top li:last-child{
+    margin-right: 0;
+}
+.footer .top li::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align: middle;
+}
+.footer .top li span{
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff;
+}
+.footer .top li:nth-child(2)::before{
+    background-position: -130px 0;
+}
+.footer .top li:nth-child(3)::before{
+    background-position: -64px 0;
+}
+.footer .bottom{
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+.footer .bottom a{
+    font-size: 14px;
+    color: #999;
+}
+.footer .bottom p{
+    margin-bottom: 20px;
+}
+

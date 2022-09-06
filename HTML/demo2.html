@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .demo1{
+      display: grid;
+      grid-template-rows: 100px 100px;
+        grid-template-columns:100px 100px ;
+        column-gap: 24px;
+        row-gap: 24px;
+
+    }
+    .item:nth-of-type(1){
+        background: red;
+
+    }
+    .item:nth-of-type(2){
+        background: blue;
+    }
+    .item:nth-of-type(3){
+        background: purple;
+    }
+    .item:nth-of-type(4){
+        background: #8a6d3b;
+    }
+    .layout{
+        grid-template-areas:
+        "header header header"
+        "siderbar content content"
+        "footer footer footer";
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+    }
+    header{
+        grid-area: header;
+    }
+    main{
+        grid-area: content;
+    }
+    aside{
+        grid-area: siderbar;
+    }
+    footer{
+        grid-area: footer;
+    }
+    .demo2{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .item1:nth-of-type(1){
+        flex: 1;
+        border: 1px solid red;
+    }
+    .item1:nth-of-type(2){
+        flex: 5;
+        border: 1px solid green;
+    }
+    .item1:nth-of-type(3){
+        flex: 1;
+        border: 1px solid blue;
+    }
+
+  </style>
+</head>
+<body>
+<div class="demo1">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
+<div class="demo2">
+    <div class="item1">demo1</div>
+    <div class="item1">demo2</div>
+    <div class="item1">demo3</div>
+</div>
+<div class="layout">
+    <header>头部</header>
+    <aside>侧边栏</aside>
+    <main>内容</main>
+    <footer>底部</footer>
+</div>
+</body>
+</html>

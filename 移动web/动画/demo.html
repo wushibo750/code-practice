@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /*使用动画*/
+            animation: change 3s;
+        }
+        /*百分比指的是动画总时长占比*/
+        @keyframes change {
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 500px;
+                height: 300px;
+            }
+            100%{
+                width: 800px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

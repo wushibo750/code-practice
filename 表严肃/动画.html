@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        nav a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px;
+        }
+        /*nav a:hover{*/
+        /*    background: #500;*/
+        /*    color: white;*/
+        /*}*/
+        /*nav a{*/
+        /*    transition-duration: 1s;*/
+        /*    transition-property: #500 white;*/
+        /*}*/
+    </style>
+</head>
+<script>
+    function test1(name){
+        console.log("职员"+name+"请假");
+        var num=1;
+        return function test2() {
+            if(num>3){
+                console.log("职员"+name+"本月请假超过三次，请假不予批准")
+            }else{
+                console.log("批准请假")
+                num++;
+            }
+        }
+        return test2;
+    }
+    let n=test1("甲")
+    n()
+    n()
+    n()
+    n()
+    let n2=test1("乙")
+    n2()
+    n2()
+    n2()
+    n2()
+</script>
+<body>
+<nav>
+    <a href="#">首页</a>
+    <a href="#">产品</a>
+    <a href="#">联系我们</a>
+    <a href="#">关于我们</a>
+</nav>
+</body>
+</html>

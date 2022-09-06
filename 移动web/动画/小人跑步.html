@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 140px;
+            height: 140px;
+            border: 1px solid #000;
+            background-image: url("bg.png");
+            animation: move 1s steps(12) infinite;
+        }
+        @keyframes move {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                /*精灵图的宽度*/
+                background-position: -1680px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+</div>
+</body>
+</html>

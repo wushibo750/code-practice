@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <title>欢迎使用正方教务管理系统！请登录</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all" />
+  <meta name="author" content="作者信息" />
+  <meta name="Copyright" content="版权信息" />
+  <meta name="description" content="站点介绍" />
+  <meta name="keywords" content="站点关键词" />
+  <meta name="referrer" content="never">
+  <link rel="icon" type="image/x-icon" href="style/4.0.0.1/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="style/4.0.0.1/images/favicon.ico" />
+
+  <link rel="stylesheet" type="text/css" href="style/4.0.0.1/css/reset.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="style/4.0.0.1/css/Loginstyle.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="style/4.0.0.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style/4.0.0.1/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+</head>
+<body>
+
+<div class="login-container">
+
+  <div class="login-blk clearfix">
+
+    <div class="login-sec">
+
+      <h2 class="login-tit">用户登录</h2>
+      <div class="login-form">
+        <form name="form1" method="post" action="./default2.aspx" id="form1" role="form">
+          <div>
+            <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="xLEneNs6VmhoyOTXDBPvpnwp+68dMc8A1H9KqxtvpECKvlwOX4yFp020L+4SI4+iMtEjwrf89wtH9LtbWs8AlkgonRg=" />
+          </div>
+
+
+
+          <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZLl6AvmFRVjI9G8EjGcsWrPLkzFUxPtPMg9HIYdXKljQpBoulg2&amp;t=637814941746327080" type="text/javascript"></script>
+
+
+          <script src="/WebResource.axd?d=JoBkLzP19aTuxbWOhHobYiY4_g8lqxvAUtbXwVvhfNW2etOguHigk-uCeNVotySDVkaPmQ2&amp;t=637814941746327080" type="text/javascript"></script>
+          <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9BD98A7D" />
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+          </div>
+
+          <!-- <h3>登录</h3> -->
+          <div class="form-group">
+            <div class="acpssec">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input name="txtUserName" type="text" maxlength="32" id="txtUserName" tabindex="1" autocomplete="off" class="form-control" name="yhm" placeholder="用户名" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input name="TextBox2" type="password" id="TextBox2" tabindex="2" name="mm" autocomplete="off" class="form-control" placeholder="密码" value="" />
+              </div>
+              <div class="input-group input-group-jym">
+                <span class="input-group-addon"><i class="fa fa-shield"></i></span>
+                <input name="txtSecretCode" type="text" id="txtSecretCode" tabindex="3" onblur="yzblur(this);" onkeydown="keydown(this);" class="form-control" placeholder="验证码" onfocus="show(this);" title="看不清，换一张" alt="看不清，换一张" />
+                <div class="jympic">
+                  <img id="icode" title="看不清换一张" alt="看不清换一张" src="/CheckCode.aspx?SafeKey=0c341f69a0a65dbb3d456b3f6dcb6d8a" style="border-width:0px;cursor: pointer;" />
+                </div>
+
+
+              </div>
+
+              <div class="input-group input-group-jsxx">
+                <table id="RadioButtonList1" class="formline login-radio clearfix" border="0">
+                  <tr>
+                    <td><input id="RadioButtonList1_0" type="radio" name="RadioButtonList1" value="部门" tabindex="4" /><label for="RadioButtonList1_0">部门</label></td><td><input id="RadioButtonList1_1" type="radio" name="RadioButtonList1" value="教师" tabindex="4" /><label for="RadioButtonList1_1">教师</label></td><td><input id="RadioButtonList1_2" type="radio" name="RadioButtonList1" value="学生" checked="checked" tabindex="4" /><label for="RadioButtonList1_2">学生</label></td><td><input id="RadioButtonList1_3" type="radio" name="RadioButtonList1" value="访客" tabindex="4" /><label for="RadioButtonList1_3">访客</label></td>
+                  </tr>
+                </table>
+
+              </div>
+            </div>
+          </div>
+          <div class="login-btn">
+            <input type="submit" name="Button1" value="登录" onclick="return CheckBeginData();" id="Button1" tabindex="5" class="btn btn-primary btn-block" />
+
+            <input type="submit" name="Button2" value="刷新验证码" id="Button2" tabindex="7" Class="btn btn-primary btn-block" style="display:none;" />
+
+            <div class="login-tag">
+              <input name="txtKeyExponent" type="text" id="txtKeyExponent" style="display:none;" value="010001" /><input name="txtKeyModulus" type="text" id="txtKeyModulus" style="display:none" value="D1F30CE831D8B9202A2203751295DCE8BBDE5F2F6CEA75572854F5075847249FB5D1976A362320DFEB622D945290BF4FE8E69A00D44B02D3A56B8C3691F31E88135617DC78181830AC45568387EFEB19508C796134C7D40478A7296CB06231D188E0711174D5A772A253EEB8FC03A2CBD85F6E7B6CDCA75A22EE3C1DCA964F41" />
+              <span><a href="mmcz.aspx" id="linkForget" class="checkbox pull-right " target="_blank">忘记密码</a></span><!--  | <span><a href="">注册</a></span> -->
+            </div>
+          </div>
+
+
+          <script type="text/javascript">
+            //<![CDATA[
+            WebForm_AutoFocus('txtUserName');//]]>
+          </script>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="login-foot" style="display:none;" >
+    版权所有@正方软件股份有限公司&nbsp;&nbsp;<br class="mbr">
+    浙江省杭州市西湖区紫霞街176号互联网创新创业园&nbsp;&nbsp;<a href=" " style="color:#ffffff">浙ICP 备1102936号</a>
+  </div>
+
+
+</div>
+
+</body>
+</html>
