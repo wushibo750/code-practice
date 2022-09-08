@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        img{
+            width: 500px;
+            height: 300px;
+        }
+        .btn,.points{
+            position: absolute;
+            cursor: pointer;
+        }
+        .btn{
+            width: 20px;
+            height: 40px;
+            background: green;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            top: 50%;
+            margin-top: -20px;
+            z-index: 999;
+        }
+        .btn_l{
+            left: 0;
+        }
+        .btn_r{
+            right: 0;
+        }
+        .points{
+            width: 100px;
+            height: 20px;
+            border-radius: 20px;
+            background: skyblue;
+            left: 50%;
+            margin-left: -50px;
+            bottom: 30px;
+        }
+        .points li{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: red;
+            float: left;
+            margin: 2.5px 5px;
+        }
+        .points li.blue{
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="img/1.png" alt="">
+    <div class="btn btn_l"> &lt; </div>
+    <div class="btn btn_r"> &gt; </div>
+    <ul class="points">
+        <li class="blue"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    // 1.点击4个点   切换成对应的图片
+    // 2.点击左右按钮   图片切换
+    // 3.切换图片时  改变图片的src
+    // 4.左右按钮 和 下面四个点  需要控制同一个变量
+
+    // 1.获取元素
+    var oImg=document.getElementsByTagName("img")[0];
+    var oBtn_l=document.getElementsByClassName("btn_l")[0];
+    var oBtn_r=document.getElementsByClassName("btn_r")[0];
+    var aLi=document.getElementsByTagName("li");
+    console.log("li长度===》",aLi.length)
+    // 2.声明全局变量
+    let index=0;
+
+    function point(){
+        for(let i=0;i<aLi.length;i++){
+            aLi[i].className="";
+        }
+        aLi[index].className="blue";
+    }
+    // 3.点击左按钮   index--   0临界点
+    oBtn_l.onclick=function(){
+        index===0?index=3:index--;
+        oImg.src="img/"+index+".png";
+        point();
+    }
+
+    // 4.点击右按钮   index++   3临界点
+    oBtn_r.onclick=function(){
+        index===3?index=0:index++;
+        oImg.src="img/"+index+".png";
+        point();
+    }
+
+    // 5.下面4个点
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].a=i;//给li添加 自定义的属性    储存 i
+        console.log("ali[i]的值===>",aLi[i].a)
+        aLi[i].onclick=function(){
+            index=this.a;
+            console.log(this.a)
+            oImg.src="img/"+index+".png";
+            point();
+        }
+    }
+</script>
+
+</body>
+</html>

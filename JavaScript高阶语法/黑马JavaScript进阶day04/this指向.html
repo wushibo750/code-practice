@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<script>
+    function sayHi(){
+        console.log(this)
+    }
+    let user={
+        name:'小明',
+        age:18
+    }
+    let student={
+        name:'小红',
+        age:16
+    }
+    sayHi.call(user)
+    sayHi.call(student)
+    function counter(x,y){
+        return x+y;
+    }
+    let result=counter.call(null,5,10);
+    console.log(result)
+</script>
+</body>
+</html>

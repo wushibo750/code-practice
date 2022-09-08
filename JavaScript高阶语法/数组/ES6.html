@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    // let getObject={
+    //     name:'wushibo',
+    //     age:21,
+    //     sayHi(){
+    //         console.log("Hello World")
+    //     }
+    // }
+    // console.log(Object.getOwnPropertyNames(getObject))  //返回对象自身非Symbol属性键组成的数组
+    function Test(name) {
+        name="John"
+    }
+    Test.name='Tom';
+    let result = (new Test('JK')).name;
+    console.log(Object.assign(
+        {ar:[1,2,3]},
+        {ar:[2,3,4]}
+    ))
+</script>
+<body>
+<div style="z-index: 1;">
+    <div style="z-index: 3;">a</div>
+</div>
+<div style="z-index: 1;">
+    <div style="z-index: 3;">b</div>
+</div>
+<div style="z-index: 2;">c</div>
+<div style="z-index: 1;">d</div>
+</body>
+</html>
