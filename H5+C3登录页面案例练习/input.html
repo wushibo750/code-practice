@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+提交文件<input type="file" onclick="onDemo"/>
+</body>
+<script>
+    function onDemo(e) {
+        console.log("e的数据为===》",e)
+        console.log("e里面的数据===》",e.target.files)
+    }
+</script>
+</html>

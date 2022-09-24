@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 600px;height: 400px">
+
+</div>
+<script type="text/javascript">
+    let myChart=echarts.init(document.getElementById('main'));
+    let option={
+        title:{
+            test:'Echarts 入门案例'
+        },
+        tooltip:{
+        },
+        legend:{
+            data:['销量']
+        },
+        xAxis:{
+            data:['衬衫','羊毛衫','羊毛衫1']
+        },
+        yAxis:{},
+        series:[{
+            name:'销量',
+            type:'bar',
+            data:[5,10,36]
+        }]
+    }
+    myChart.setOption(option)
+</script>
+</body>
+</html>
